@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="title">Habits</h1>
+    <p id="description">Take 3 minutes to reflect on your day! :)</p>
+    <form id="daily-log">
+
+
+
+        <fieldset id="activities-fieldset">
+            <legend>Activities</legend>
+            <div class="activity-entry">
+                <label for="activity1">Activity 1</label>
+                <input type="text" id="activity1" placeholder="Activity">
+                <label for="time1">Time spent</label>
+                <input id="time1" type="number" min="0" max="24" placeholder="Hours">
+            </div>
+
+        </fieldset>
+        <button type="button" onclick="addActivity()">Add Another Activity</button>
+
+
+
+        <fieldset>
+            <legend>Happiness level</legend>
+            <div>
+                <input type="radio" id="happy1" name="feeling" value="happy">
+                <label for="happy1">Happy:)</label>
+                <input type="radio" id="happy2" name="feeling" value="neutral">
+                <label for="happy2">Neutral:/</label>
+                <input type="radio" id="happy3" name="feeling" value="sad">
+                <label for="happy3">Sad:(</label>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Reflect on your day!</legend>
+            <textarea id="reflectionText" placeholder="Write your reflection here..."></textarea>
+        </fieldset>
+
+
+        
+        <button type="button" onclick="reflection()">Submit</button>
+        <button type="button" onclick="saveResult()">Save Result</button>
+
+    </form>
+
+    <p id="reflectionday"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
